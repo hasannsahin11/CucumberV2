@@ -19,6 +19,7 @@ public class _02_CountrySteps extends MyMethods {
         nv.clickMethod(nv.getSetupBtn());
         nv.clickMethod(nv.getParametersBtn());
         nv.clickMethod(nv.getCountriesBtn());
+        System.out.println("Navigated to the country page");
     }
 
     @When("Create a new country")
@@ -27,13 +28,13 @@ public class _02_CountrySteps extends MyMethods {
         dc.sendKeysMethod(dc.getCountryNameInput(), "Brazil");
         dc.sendKeysMethod(dc.getCountryCodeInput(), "Ney9");
         dc.clickMethod(dc.getCountrySaveButton());
-
+        System.out.println("Created a new country");
     }
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
         dc.verifyContainsText(dc.getCountrySuccessMessage(),"successfully");
-
+        System.out.println("Success message displayed");
     }
 
     @When("Search the country name")
