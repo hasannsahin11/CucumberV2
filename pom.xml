@@ -85,22 +85,25 @@
 
     <!-- To add multiple builds for Jenkins   -->
     <profiles>
-        <!--  Smoke Test Profile    -->
+        <!-- Smoke Test Profile -->
         <profile>
             <id>smoke_profile</id>
             <build>
                 <plugins>
+                    <!-- Maven Surefire Plugin for Smoke Tests -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-surefire-plugin</artifactId>
                         <version>3.0.0</version>
                         <configuration>
                             <includes>
-                                <!--   Show Jenkins which class we want to run      -->
+                                <!-- Show Jenkins which class we want to run -->
                                 <include>src/test/java/Runners/_04_RunnerForGroups.java</include>
                             </includes>
                         </configuration>
                     </plugin>
+
+                    <!-- Other plugins you may have -->
                 </plugins>
             </build>
         </profile>
@@ -110,21 +113,50 @@
             <id>regression_profile</id>
             <build>
                 <plugins>
+                    <!-- Maven Surefire Plugin for Regression Tests -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-surefire-plugin</artifactId>
                         <version>3.0.0</version>
                         <configuration>
                             <includes>
-                                <!--   Show Jenkins which class we want to run      -->
+                                <!-- Show Jenkins which class we want to run -->
                                 <include>src/test/java/Runners/_04_RunnerForGroups.java</include>
                             </includes>
                         </configuration>
                     </plugin>
+
+                    <!-- Other plugins you may have -->
                 </plugins>
             </build>
         </profile>
-
     </profiles>
 
+    <!-- Add the maven-cucumber-reporting plugin -->
+    <build>
+        <plugins>
+            <!-- Other plugins you may have -->
+
+            <!-- Maven Cucumber Reporting Plugin -->
+            <plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>5.6.0</version>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>Cucumber Project</projectName>
+                            <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
+
