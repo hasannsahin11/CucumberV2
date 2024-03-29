@@ -92,7 +92,7 @@
                 <configuration>
                     <includes>
                         <!--   Show Jenkins which class we want to run      -->
-                        <include>Runners/_04_RunnerForGroups.java</include>
+                        <include>src/test/java/Runners/_04_RunnerForGroups.java</include>
                     </includes>
                 </configuration>
             </plugin>
