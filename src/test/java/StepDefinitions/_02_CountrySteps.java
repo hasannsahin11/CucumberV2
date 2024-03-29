@@ -24,8 +24,8 @@ public class _02_CountrySteps extends MyMethods {
     @When("Create a new country")
     public void createANewCountry() {
         dc.clickMethod(dc.getAddCountryBtn());
-        dc.sendKeysMethod(dc.getCountryNameInput(), "Argentina");
-        dc.sendKeysMethod(dc.getCountryCodeInput(), "ICARDI9");
+        dc.sendKeysMethod(dc.getCountryNameInput(), "Brazil");
+        dc.sendKeysMethod(dc.getCountryCodeInput(), "Ney9");
         dc.clickMethod(dc.getCountrySaveButton());
 
     }
@@ -39,8 +39,8 @@ public class _02_CountrySteps extends MyMethods {
     @When("Search the country name")
     public void searchTheCountryName() {
         dc.waitUntilVisible(dc.getNameSearchInput());
-        dc.sendKeysMethod(dc.getNameSearchInput(), "Argentina");
-        dc.sendKeysMethod(dc.getCodeSearchInput(),"ICARDI9");
+        dc.sendKeysMethod(dc.getNameSearchInput(), "Brazil");
+        dc.sendKeysMethod(dc.getCodeSearchInput(),"Ney9");
         dc.clickMethod(dc.getSearchBtn());
     }
 

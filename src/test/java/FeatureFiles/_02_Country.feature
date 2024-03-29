@@ -21,12 +21,12 @@ Feature: Country Functionality
 
   Scenario:Create country with parameters
     When Navigate to Country Page
-    When Enter country name as "Argentina" and code as "ICARDI9"
+    When Enter country name as "Brazil" and code as "Ney9"
     And Click on Save button
     Then Success message should be displayed
 
   Scenario: Delete country with parameters
     When Navigate to Country Page
-    When Search the country name as "Argentina" and code as "ICARDI9"
+    When Search the country name as "Brazil" and code as "Ney9"
     And Click the delete button
     Then  User should see the Country successfully deleted message
