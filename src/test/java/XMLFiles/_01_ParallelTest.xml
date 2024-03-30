@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Parallel Test"  parallel="tests" thread-count="2">
     <test name="Test with Edge">
-        <parameter name="browser" value="edge"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
         <classes>
             <class name="Runners._09_RunnerForParallelTest"></class>
         </classes>
     </test>
 
     <test name="Test with Chrome">
-        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="browser" value="edge"></parameter>
         <classes>
             <class name="Runners._09_RunnerForParallelTest"></class>
         </classes>

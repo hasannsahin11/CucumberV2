@@ -33,15 +33,16 @@ public class _02_CountrySteps extends MyMethods {
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
-        dc.verifyContainsText(dc.getCountrySuccessMessage(),"successfully");
+        dc.verifyContainsText(dc.getCountrySuccessMessage(), "successfully");
         System.out.println("Success message displayed");
     }
 
     @When("Search the country name")
     public void searchTheCountryName() {
+
         dc.waitUntilVisible(dc.getNameSearchInput());
         dc.sendKeysMethod(dc.getNameSearchInput(), "Brazil");
-        dc.sendKeysMethod(dc.getCodeSearchInput(),"Ney9");
+        dc.sendKeysMethod(dc.getCodeSearchInput(), "Ney9");
         dc.clickMethod(dc.getSearchBtn());
     }
 
