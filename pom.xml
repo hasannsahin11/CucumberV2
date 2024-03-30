@@ -88,65 +88,65 @@
     </dependencies>
 
 
-            <!-- To add multiple builds for Jenkins   -->
-    <profiles>
-    <!--  Smoke Test Profile    -->
-    <profile>
-        <id>smoke_profile</id>
-        <build>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.2.5</version>
-                    <configuration>
-                        <includes>
-                            <!--   Show Jenkins which class we want to run for regression tests      -->
-                            <include>src/test/java/Runners/_04_RunnerForGroups.java</include>
-                        </includes>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </build>
-    </profile>
+    <!-- To add multiple builds for Jenkins   -->
+    <!--    <profiles>-->
+    <!--    &lt;!&ndash;  Smoke Test Profile    &ndash;&gt;-->
+    <!--    <profile>-->
+    <!--        <id>smoke_profile</id>-->
+    <!--        <build>-->
+    <!--            <plugins>-->
+    <!--                <plugin>-->
+    <!--                    <groupId>org.apache.maven.plugins</groupId>-->
+    <!--                    <artifactId>maven-surefire-plugin</artifactId>-->
+    <!--                    <version>3.2.5</version>-->
+    <!--                    <configuration>-->
+    <!--                        <includes>-->
+    <!--                            &lt;!&ndash;   Show Jenkins which class we want to run for regression tests      &ndash;&gt;-->
+    <!--                            <include>src/test/java/Runners/_04_RunnerForGroups.java</include>-->
+    <!--                        </includes>-->
+    <!--                    </configuration>-->
+    <!--                </plugin>-->
+    <!--            </plugins>-->
+    <!--        </build>-->
+    <!--    </profile>-->
 
-<!--     Regression Test Profile-->
-<!--            <profile>-->
-<!--                <id>regression_profile</id>-->
-<!--                <build>-->
-<!--                    <plugins>-->
-<!--                        <plugin>-->
-<!--                            <groupId>org.apache.maven.plugins</groupId>-->
-<!--                            <artifactId>maven-surefire-plugin</artifactId>-->
-<!--                            <version>3.2.5</version>-->
-<!--                            <configuration>-->
-<!--                                <includes>-->
-<!--                                    &lt;!&ndash;   Show Jenkins which class we want to run for regression tests      &ndash;&gt;-->
-<!--                                    <include>src/test/java/Runners/_04_RunnerForGroups.java</include>-->
-<!--                                </includes>-->
-<!--                            </configuration>-->
-<!--                        </plugin>-->
-<!--                    </plugins>-->
-<!--                </build>-->
-<!--            </profile>-->
-    </profiles>
+    <!--     Regression Test Profile-->
+    <!--            <profile>-->
+    <!--                <id>regression_profile</id>-->
+    <!--                <build>-->
+    <!--                    <plugins>-->
+    <!--                        <plugin>-->
+    <!--                            <groupId>org.apache.maven.plugins</groupId>-->
+    <!--                            <artifactId>maven-surefire-plugin</artifactId>-->
+    <!--                            <version>3.2.5</version>-->
+    <!--                            <configuration>-->
+    <!--                                <includes>-->
+    <!--                                    &lt;!&ndash;   Show Jenkins which class we want to run for regression tests      &ndash;&gt;-->
+    <!--                                    <include>src/test/java/Runners/_04_RunnerForGroups.java</include>-->
+    <!--                                </includes>-->
+    <!--                            </configuration>-->
+    <!--                        </plugin>-->
+    <!--                    </plugins>-->
+    <!--                </build>-->
+    <!--            </profile>-->
+    <!--    </profiles>-->
 
 
-<!--    This is for running XML Files-->
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-surefire-plugin</artifactId>-->
-<!--                <version>3.2.5</version>-->
-<!--                <configuration>-->
-<!--                    <suiteXmlFiles>-->
-<!--                        <suiteXmlFile>src/test/java/XMLFiles/_01_ParallelTest.xml</suiteXmlFile>-->
-<!--                    </suiteXmlFiles>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
+    <!--    This is for running XML Files-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/java/XMLFiles/_01_ParallelTest.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
 
