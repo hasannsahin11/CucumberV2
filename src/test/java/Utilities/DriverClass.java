@@ -7,6 +7,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 //public class DriverClass {
 //    private static ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
 //    private static ThreadLocal<String> threadDriverName = new ThreadLocal<>();
@@ -60,6 +63,9 @@ public class DriverClass {
     public static WebDriver getDriver() {
         if (threadDriver.get() == null) {
 
+
+            Logger logger = Logger.getLogger("");
+            logger.setLevel(Level.SEVERE);
             if (threadDriverName.get() == null) {
                 threadDriverName.set("chrome");
             }
